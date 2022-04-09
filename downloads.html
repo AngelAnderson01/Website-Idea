@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <Title>Budget with Angel</Title>
+        <link rel="stylesheet" href="stylesheets.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" >Home</a>
+        <a href= "info.html" >Information</a>
+        <a href="downloads.html"class="active" >Free Printables</a>
+        <a href="about.html">About</a>
+        <a  class =".navbarright" href="contact.html">Contact Me</a>
+        
+    </nav>
+   
+
+
+<img class ="img" src="" alt="">
+
+<main class="row">
+    <nav class="tab">
+      <button class="tablinks col-3 col-s-3" onclick="openItem(event, 'budget')" id="defaultOpen">Budget Sheets</button>
+      <button class="tablinks col-3 col-s-3" onclick="openItem(event, 'fun')">Budgeting Fun</button>
+      <button class="tablinks col-3 col-s-3" onclick="openItem(event, 'affirmations')">Positive Affirmations</button>
+    </nav>
+    
+    <article id="budget" class="tabcontent col-6 col-s-9">
+      <h3>Budget Sheets</h3>
+      <h4>Downloadable ~ Free</h4>
+      
+    </article>
+    
+    <article id="fun" class="tabcontent col-6 col-s-9">
+      <h3>Budgeting Fun</h3>
+      <h4>These are fun activities that will help keep you motivated to stay on track with your budget!</h4>
+       
+    </article>
+    
+    <article id="affirmations" class="tabcontent col-6 col-s-9">
+      <h3>Positive Affirmations</h3>
+      <h4>Throughout my journey having positive quotes posted everywhere helped keep me motivated, maybe it could help you too!</h4>
+      
+    </article>
+  </main>
+
+<script>
+    function openItem(evt, item) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(item).style.display = "block";
+      evt.currentTarget.className += " active";
+    }   
+    document.getElementById("defaultOpen").click();
+</script>
+   
+  
+</body>  
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <Title>Budget with Angel</Title>
+        <link rel="stylesheet" href="stylesheets.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" >Home</a>
+        <a href= "info.html" class="active">Information</a>
+        <a href="downloads.html">Free Printables</a>
+        <a href="about.html">About</a>
+        <a  class =".navbarright" href="contact.html">Contact Me</a>
+        
+        
+    </nav>
+   
+
+
+<img class ="img" src="" alt="">
+
+<main class="row">
+    <nav class="tab">
+      <button class="tablinks col-3 col-s-3" onclick="openItem(event, 'budget')" id="defaultOpen">Budget Topics</button>
+      <button class="tablinks col-3 col-s-3" onclick="openItem(event, 'stories')">Articles</button>
+      <button class="tablinks col-3 col-s-3" onclick="openItem(event, 'contact')">Contact Me</button>
+    </nav>
+    
+    <article id="budget" class="tabcontent col-6 col-s-9">
+      <h3>Budget Topics</h3>
+      
+      
+    </article>
+    
+    <article id="stories" class="tabcontent col-6 col-s-9">
+      <h3>Articles</h3>
+      
+       
+    </article>
+    
+    <article id="contact" class="tabcontent col-6 col-s-9">
+      <h3>Contact Me</h3>
+      <h5>If you would like help with setting up a budget or have any questions please submit the form below</h5>
+      
+    </article>
+  </main>
+
+<script>
+    function openItem(evt, item) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(item).style.display = "block";
+      evt.currentTarget.className += " active";
+    }   
+    document.getElementById("defaultOpen").click();
+</script>
+   
+  
+</body>  
+
+</html>
